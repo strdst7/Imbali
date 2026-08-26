@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --story-scale: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #121110;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121110;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b3028;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BD542F;
+}
+
+/* Selection */
+::selection {
+  color: #fffaf0;
+  background: #BD542F;
+}
+
+/* Smooth reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 800ms cubic-bezier(0.22, 1, 0.36, 1), transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Dedication page animations ===== */
+@keyframes afsana-twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes afsana-born {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(2.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes afsana-thread {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -120;
+  }
+}
+
+@keyframes afsana-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes afsana-shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes afsana-scroll {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
