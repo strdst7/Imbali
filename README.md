@@ -1,6 +1,10 @@
 
 # 🌍 IMBALI • South African Folktale & YouTube Visual Storytelling Studio
 
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/ca859332-7770-467f-8db8-e197bc67268b" />
+
+
+
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
